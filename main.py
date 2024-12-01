@@ -4,8 +4,9 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS  # type: ignore
 from requests import HTTPError
 
-from governance_client import BlockfrostGovernanceAPI
 from crypto import raw_to_bech32
+from governance_client import BlockfrostGovernanceAPI
+import submitter
 
 proposal_data_cache = None
 treasury_epoch_map = None
@@ -106,6 +107,16 @@ def drep_votes():
             }
         )
     return jsonify(vote_data)
+
+
+@app.route("/submit_reaction", methods=["POST"])
+def submit_reaction():
+    stake_key = request.json.get("stake_key")
+    drep_id = request.json.get("drep_id")
+    proposal = request.json.get("proposal")
+    support = request.json.get("support")
+    reaction = submitter.main(stake_key, drep_id, proposal, support)
+    return jsonify({"result": "success", "reaction": reaction})
 
 
 if __name__ == "__main__":
