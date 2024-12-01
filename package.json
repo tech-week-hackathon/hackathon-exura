@@ -1,0 +1,63 @@
+{
+  "name": "cardano-treasury-dashboard-hackathon",
+  "version": "0.1.0",
+  "private": true,
+  "browser": {
+    "crypto": "crypto-browserify"
+  },
+  "dependencies": {
+    "@blaze-cardano/sdk": "^0.2.11",
+    "@emotion/react": "^11.13.5",
+    "@emotion/styled": "^11.13.5",
+    "@emurgo/cardano-serialization-lib-browser": "^13.2.0",
+    "@meshsdk/react": "^1.7.22",
+    "@mui/icons-material": "^6.1.9",
+    "@mui/material": "^6.1.9",
+    "@mui/x-data-grid": "^7.23.0",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.7.8",
+    "bech32": "^2.0.0",
+    "buffer": "^6.0.3",
+    "chart.js": "^4.4.6",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "crypto-browserify": "^3.12.1",
+    "lucid-cardano": "^0.10.11",
+    "mesh": "^7.0.3",
+    "meshsdk": "^0.0.1",
+    "react": "^18.3.1",
+    "react-app-rewired": "^2.2.1",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^18.3.1",
+    "react-scripts": "5.0.1",
+    "sdk": "^0.5.0",
+    "stream": "^0.0.3",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
